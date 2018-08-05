@@ -58,7 +58,7 @@ Eclipseでサーバーをコンパイルして実行するには、Mavenプロ�
 *と* Javaアプリケーション*）。 U2F拡張機能が必要です
 デモアプリケーションがあなたのU2Fトークンと話すためにChromeにインストールされます。
 
-Mavenで直接実行するには、u2f-ref-codeディレクトリから `mvn compile exec：java`を実行してください。
+Mavenで直接実行するには、u2f-ref-codeディレクトリから `mvn compile exec:java`を実行してください。
 
 ### U2F-GAE-Demo
 
