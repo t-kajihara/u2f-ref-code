@@ -67,14 +67,14 @@ U2Fとのユーザーインタラクションの可能性を示すWebプラッ�
 ウェブページ。
 
 Mavenで開発サーバーを起動するには、 `mvn appengine:devserver`を実行します。 この
-`http:// localhost:8888 /`でサーバーをローカルに実行します。
+`http://localhost:8888/`でサーバーをローカルに実行します。
 
 上記のように、EclipseにMavenプロジェクトをインポートする場合、調整する必要があるかもしれません
 JDKのバージョン、App Engine SDKのバージョンなどすべてがコンパイルされると、
-App Engineサーバーをローカルに配置し、Google Chromeを `http:// localhost:8888 /`にポイントします。
+App Engineサーバーをローカルに配置し、Google Chromeを `http://localhost:8888/`にポイントします。
 
 Google ChromeのU2Fのビルトインサポートは、HTTPSサイトでのみ機能します。 テストする
-HTTPを使用する `http:// localhost:8888`のアプリケーションでは、
+HTTPを使用する `http://localhost:8888`のアプリケーションでは、
 以下:
 
 #### オプション1:Webストアの拡張機能を使用する
