@@ -1,4 +1,4 @@
-![翻訳前](./README.org.md)
+[翻訳前](./README.org.md)
 
 # U2F仕様のリファレンスコード
 
