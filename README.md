@@ -2,7 +2,7 @@
 
 # U2F仕様のリファレンスコード
 
-このコードは、http://fidoalliance.org/で開発されたFIDO U2F仕様を実装しています。
+このコードは、http://fidoalliance.org/ で開発されたFIDO U2F仕様を実装しています。
 このコードは、U2Fを探索することに関心のある開発者のためのリファレンスとリソースを意図しています。
 コードは、次のコンポーネントで構成されています。
 
@@ -23,7 +23,7 @@
 これは、Google App Engine Webプラットフォーム上に構築されたサンプルアプリケーションです。
 Webページ内のU2Fとのユーザ対話のための可能なUXを示しています。 ザ
 サンプルアプリケーションが配備され、ライブで利用可能
-https://crxjs-dot-u2fdemo.appspot.com/。 基礎となるU2F機能は、
+https://crxjs-dot-u2fdemo.appspot.com/ 。 基礎となるU2F機能は、
 Java U2F実装。 開発者はここからコアアイディアを得ることができます。
 U2Fを自分の好きなWebアプリケーションプラットフォーム上のWebアプリケーションに統合します。
 
@@ -31,16 +31,16 @@ U2Fを自分の好きなWebアプリケーションプラットフォーム上�
 
 この拡張機能は、U2F機能をChromeブラウザにもたらします。 Webアプリケーション
 この拡張機能によって提供されるU2F APIを使用してUSB U2Fデバイスにアクセスできます。
-拡張機能は[Chromeストアから入手可能] [ウェブストア]から直接利用できます。
+拡張機能は[Chromeストアから入手可能][webstore]から直接利用できます。
 ソースは `` u2f-chrome-extension``で利用できます。
-[拡張README]（u2f-chrome-extension / README.md）を参照してください。
+[拡張README](u2f-chrome-extension/README.md)を参照してください。
 
 [webstore]: https://chrome.google.com/webstore/detail/fido-u2f-universal-2nd-fa/pfboblefjcgdjicmnffhdgionmgcdmne
 * * *
 
 エンドツーエンドのユーザーエクスペリエンスを体験するには、物理的な
 仮想デバイス*はこれでUSB層をシミュレートしないため、USBデバイス
-時間。 https://goo.gl/z0taoWにアクセスして、FIDO U2F準拠のデバイスを見つけることができます。
+時間。 https://goo.gl/z0taoW にアクセスして、FIDO U2F準拠のデバイスを見つけることができます。
 販売可能。
 
 ## Getting started
