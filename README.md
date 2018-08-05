@@ -1,4 +1,4 @@
-![翻訳前](./README.md)
+![翻訳前](./README.org.md)
 
 # U2F仕様のリファレンスコード
 
@@ -6,80 +6,78 @@
 このコードは、U2Fを探索することに関心のある開発者のためのリファレンスとリソースを意図しています。
 コードは、次のコンポーネントで構成されています。
 
-## Java U2F implementation
+## Java U2F実装
 
-This code can verify U2F registrations and signatures. A web application built
-to accept U2F 2nd factor is built on top of a code base such as this. The code
-base includes a trivial web application so the user can experiment with
-registration and signatures (also see the sample web app below).
+このコードは、U2Fの登録と署名を検証できます。 U2F第2因子を受け入れるように構築されたWebアプリケーションは、
+このようなコードベースの上に構築されます。コードベースには簡単なWebアプリケーションが含まれているため、
+ユーザーは登録と署名を試すことができます（以下のサンプルWebアプリケーションも参照してください）。
 
-## A virtual (software) U2F device
+## 仮想（ソフトウェア）U2Fデバイス
 
-This is a Java implementation of a U2F device. It generates registration and
-signature statements and is meant for testing against your server
-implementation. A physical U2F device will generate similar statements.
+これは、U2FデバイスのJava実装です。 それは登録と
+署名ステートメントであり、サーバーに対するテスト用です
+実装。 物理的なU2Fデバイスは、同様のステートメントを生成します。
 
-## A sample web app that uses U2F
+## U2Fを使用したサンプルWebアプリケーション
 
-This is a sample application built on the Google App Engine web platform which
-demonstrates a possible UX for  user interaction with U2F in a web page.  The
-sample application is deployed and available live at
-https://crxjs-dot-u2fdemo.appspot.com/. The underlying U2F capability is provided by the
-Java U2F implementation.  A developer can take the core ideas from here and
-integrate U2F into a web application on their own favorite web app platform.
+これは、Google App Engine Webプラットフォーム上に構築されたサンプルアプリケーションです。
+Webページ内のU2Fとのユーザ対話のための可能なUXを示しています。 ザ
+サンプルアプリケーションが配備され、ライブで利用可能
+https://crxjs-dot-u2fdemo.appspot.com/。 基礎となるU2F機能は、
+Java U2F実装。 開発者はここからコアアイディアを得ることができます。
+U2Fを自分の好きなWebアプリケーションプラットフォーム上のWebアプリケーションに統合します。
 
-## A U2F extension for the Chrome browser
+## Chromeブラウザ用のU2F拡張機能
 
-This extension brings U2F capability to the Chrome browser. A web application
-is able to access USB U2F devices using the U2F API provided by this extension.
-The extension is [available from the Chrome store][webstore] for direct use.
-The source is available in ``u2f-chrome-extension`` for experimentation, see
-[the extension README](u2f-chrome-extension/README.md) for details.
+この拡張機能は、U2F機能をChromeブラウザにもたらします。 Webアプリケーション
+この拡張機能によって提供されるU2F APIを使用してUSB U2Fデバイスにアクセスできます。
+拡張機能は[Chromeストアから入手可能] [ウェブストア]から直接利用できます。
+ソースは `` u2f-chrome-extension``で利用できます。
+[拡張README]（u2f-chrome-extension / README.md）を参照してください。
 
 [webstore]: https://chrome.google.com/webstore/detail/fido-u2f-universal-2nd-fa/pfboblefjcgdjicmnffhdgionmgcdmne
 * * *
 
-To experience the end-to-end user experience you will need to get a physical
-USB device since the virtual device *does not* simulate the USB layer at this
-time. You can visit https://goo.gl/z0taoW to find FIDO U2F compliant devices
-available for sale.
+エンドツーエンドのユーザーエクスペリエンスを体験するには、物理的な
+仮想デバイス*はこれでUSB層をシミュレートしないため、USBデバイス
+時間。 https://goo.gl/z0taoWにアクセスして、FIDO U2F準拠のデバイスを見つけることができます。
+販売可能。
 
 ## Getting started
 
-u2f-ref-code is a self contained java project that includes a basic web server
-and includes packages for all crypto, utilities, etc.  It does *not* need to run
-in a container or application server like Tomcat.  To run the demo server, run
-the main class in ``com.google.u2f.tools.httpserver.U2fHttpServer``
+u2f-ref-codeは、基本的なWebサーバーを含む自己完結型のJavaプロジェクトです
+すべての暗号、ユーティリティなどのパッケージを含みます。実行する必要はありません。
+Tomcatのようなコンテナやアプリケーションサーバーで実行されます。 デモサーバーを実行するには、
+`` com.google.u2f.tools.httpserver.U2fHttpServer``のメインクラス
 
-To compile and run the server in Eclipse, import the Maven project into your
-workspace. You may need to fix the classpath if your version of JDK is
-different (this has been tested with Java 1.7).  The simple demo web server is
-in ``com.google.u2f.tools.httpserver.U2fHttpServer.java`` and runs on port
-8080. Run this class as a regular Java application (right click, select *Run
-As* and *Java Application*). Note that you need to have the U2F extension
-installed in Chrome in order for the demo app to talk to your U2F token.
+Eclipseでサーバーをコンパイルして実行するには、Mavenプロジェクトを
+ワークスペース。 ご使用のJDKのバージョンが次の場合は、クラスパスを修正する必要があります。
+異なる（これはJava 1.7でテストされています）。 シンプルなデモWebサーバーは
+`` com.google.u2f.tools.httpserver.U2fHttpServer.java``にあり、ポート
+このクラスを通常のJavaアプリケーションとして実行します（右クリックし、* Runを選択します）。
+*と* Javaアプリケーション*）。 U2F拡張機能が必要です
+デモアプリケーションがあなたのU2Fトークンと話すためにChromeにインストールされます。
 
-To run directly with Maven, run `mvn compile exec:java` from the u2f-ref-code
-directory.
+Mavenで直接実行するには、u2f-ref-codeディレクトリから `mvn compile exec：java`を実行してください。
 
 ### U2F-GAE-Demo
 
-The u2f-gae-demo project is a sample application built on the Google App Engine
-web platform which demonstrates a possible UX for user interaction with U2F in a
-web page.
+u2f-gae-demoプロジェクトは、Google App Engineで構築されたサンプルアプリケーションです
+U2Fとのユーザーインタラクションの可能性を示すWebプラットフォーム
+ウェブページ。
 
-To start the development server with Maven, run `mvn appengine:devserver`. This
-will run the server locally at `http://localhost:8888/`.
+Mavenで開発サーバーを起動するには、 `mvn appengine：devserver`を実行します。 この
+`http：// localhost：8888 /`でサーバーをローカルに実行します。
 
-As above, if importing the Maven project into Eclipse you might have to adjust
-JDK versions, App Engine SDK version, etc. Once everything compiles, you can run
-the App Engine server locally and point Google Chrome at `http://localhost:8888/`.
+上記のように、EclipseにMavenプロジェクトをインポートする場合、調整する必要があるかもしれません
+JDKのバージョン、App Engine SDKのバージョンなどすべてがコンパイルされると、
+App Engineサーバーをローカルに配置し、Google Chromeを `http：// localhost：8888 /`にポイントします。
 
-The built-in support for U2F in Google Chrome only works on HTTPS sites.  To test
-the app on `http://localhost:8888`, which uses HTTP, you need to do one of the
-following:
+Google ChromeのU2Fのビルトインサポートは、HTTPSサイトでのみ機能します。 テストする
+HTTPを使用する `http：// localhost：8888`のアプリケーションでは、
+以下：
 
-#### Option 1: Use the extension from the webstore
+#### オプション1：Webストアの拡張機能を使用する
 * Install the u2f extension [available from the Chrome store][webstore].
 * Navigate to `chrome://extensions` and enable `Developer Mode` by clicking a
   checkbox in the top right corner.
@@ -99,7 +97,7 @@ following:
   Remember to reset this value before deploying.
 * Then, point your browser at `http://localhost:8888/`.
 
-#### Option 2: Use the built-in chrome support
+#### オプション2：内蔵のクロムサポートを使用する
 * Quit all instances of Google Chrome.
 * Restart Google Chrome with the `--show-component-extension-options`
   command-line flag.
