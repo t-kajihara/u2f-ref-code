@@ -66,18 +66,18 @@ u2f-gae-demoプロジェクトは、Google App Engineで構築されたサンプ
 U2Fとのユーザーインタラクションの可能性を示すWebプラットフォーム
 ウェブページ。
 
-Mavenで開発サーバーを起動するには、 `mvn appengine：devserver`を実行します。 この
-`http：// localhost：8888 /`でサーバーをローカルに実行します。
+Mavenで開発サーバーを起動するには、 `mvn appengine:devserver`を実行します。 この
+`http:// localhost:8888 /`でサーバーをローカルに実行します。
 
 上記のように、EclipseにMavenプロジェクトをインポートする場合、調整する必要があるかもしれません
 JDKのバージョン、App Engine SDKのバージョンなどすべてがコンパイルされると、
-App Engineサーバーをローカルに配置し、Google Chromeを `http：// localhost：8888 /`にポイントします。
+App Engineサーバーをローカルに配置し、Google Chromeを `http:// localhost:8888 /`にポイントします。
 
 Google ChromeのU2Fのビルトインサポートは、HTTPSサイトでのみ機能します。 テストする
-HTTPを使用する `http：// localhost：8888`のアプリケーションでは、
-以下：
+HTTPを使用する `http:// localhost:8888`のアプリケーションでは、
+以下:
 
-#### オプション1：Webストアの拡張機能を使用する
+#### オプション1:Webストアの拡張機能を使用する
 * Install the u2f extension [available from the Chrome store][webstore].
 * Navigate to `chrome://extensions` and enable `Developer Mode` by clicking a
   checkbox in the top right corner.
@@ -97,7 +97,7 @@ HTTPを使用する `http：// localhost：8888`のアプリケーションで�
   Remember to reset this value before deploying.
 * Then, point your browser at `http://localhost:8888/`.
 
-#### オプション2：内蔵のクロムサポートを使用する
+#### オプション2:内蔵のクロムサポートを使用する
 * Quit all instances of Google Chrome.
 * Restart Google Chrome with the `--show-component-extension-options`
   command-line flag.
