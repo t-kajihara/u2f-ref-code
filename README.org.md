@@ -1,10 +1,9 @@
-![翻訳前](./README.md)
+# Reference code for U2F specifications
 
-# U2F仕様のリファレンスコード
-
-このコードは、http://fidoalliance.org/で開発されたFIDO U2F仕様を実装しています。
-このコードは、U2Fを探索することに関心のある開発者のためのリファレンスとリソースを意図しています。
-コードは、次のコンポーネントで構成されています。
+This code implements the FIDO U2F specifications being developed at
+http://fidoalliance.org/.  This code is intended as a reference and resource
+for developers who are interested in exploring U2F.  The code consists of the
+following components:
 
 ## Java U2F implementation
 
